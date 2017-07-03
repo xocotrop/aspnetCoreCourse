@@ -10,7 +10,6 @@ namespace vegas.Mapping
         {
             CreateMap<Make, MakeResource>();
             CreateMap<Model, ModelResource>();
-
         }
     }
 }
