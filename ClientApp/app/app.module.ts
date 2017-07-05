@@ -1,3 +1,5 @@
+import { MakeService } from './services/make.service';
+import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -14,7 +16,8 @@ export const sharedConfig: NgModule = {
         NavMenuComponent,
         CounterComponent,
         FetchDataComponent,
-        HomeComponent
+        HomeComponent,
+        VehicleFormComponent
     ],
     imports: [
         RouterModule.forRoot([
@@ -22,7 +25,11 @@ export const sharedConfig: NgModule = {
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
+            { path : 'vehicles/new', component : VehicleFormComponent },
             { path: '**', redirectTo: 'home' }
         ])
+    ],
+    providers : [
+        MakeService
     ]
 };
